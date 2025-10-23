@@ -21,8 +21,6 @@ Indonesia’s tropical peatlands store nearly half of the world’s tropical pea
 
 ## Scenario: Canal Water Level (CWL) Rewetting
 ![](scenario1.jpeg)
-**Findings**
-
 - Maintaining **CWL +10 cm during dry seasons** reduced mean peat carbon loss by **~1.0 tC ha⁻¹ yr⁻¹ (~3.67 tCO₂ ha⁻¹ yr⁻¹)**.  
 - At the landscape scale (~1 million ha), this equates to **~3.68 MtCO₂ yr⁻¹ avoided**.  
 - **Economic valuation:**  
