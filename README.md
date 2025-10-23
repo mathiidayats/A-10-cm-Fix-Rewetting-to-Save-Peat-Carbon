@@ -1,5 +1,5 @@
 ---
-# A-10-cm-Fix-Rewetting-to-Save-Peat-Carbon
+# A 10cm Fix: Rewetting to Save Peat Carbon
 ---
 
 ## Abstract
