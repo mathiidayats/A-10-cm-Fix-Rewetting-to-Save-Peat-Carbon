@@ -35,9 +35,9 @@ These findings demonstrate that **modest, targeted rewetting** is an effective a
 
 ---
 
-# Water Table Depth (Baseline)
+# Water Table Depth
 
-![](figures/figure1.jpg){width=80%}
+![](figure1.jpg){width=80%}
 *Figure 1. Baseline water table depth (WTD) distribution (2001–2024) across the study area, showing spatial variability under average hydroclimatic conditions.*
 
 ---
