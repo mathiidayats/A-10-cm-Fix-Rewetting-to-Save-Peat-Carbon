@@ -8,7 +8,6 @@ Indonesia’s tropical peatlands store nearly half of the world’s tropical pea
 
 ## Water Table Depth
 ![](figure1.jpg)
-Figure 1. Baseline water table depth (WTD) distribution (2001–2024) across the study area, showing spatial variability under average hydroclimatic conditions.
 
 ---
 
