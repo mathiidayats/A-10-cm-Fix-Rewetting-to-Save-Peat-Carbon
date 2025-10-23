@@ -14,82 +14,200 @@ body {
   line-height: 1.6;
 }
 header {
-  background: linear-gradient(90deg, #0284c7 0%, #0d9488 100%);
+  background: linear-gradient(90deg, #0284c7 0%, #0d9488 100%), url('https://scx1.b-cdn.net/csz/news/800a/2020/localcommuni.jpg');
+  background-blend-mode: overlay;
+  background-size: cover;
   color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 80px 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+}
+header > * {
+  position: relative;
+  z-index: 2;
 }
 header h1 {
-  font-size: 40px;
+  font-size: 52px;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 header h2 {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 26px;
   margin: 0;
 }
 main {
-  padding: 40px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+section {
+  margin-bottom: 60px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 1.2s ease-in-out;
 }
 h2 {
   color: #0369a1;
   border-left: 6px solid #0d9488;
-  padding-left: 10px;
-  margin-top: 50px;
+  padding-left: 12px;
+  margin-top: 0;
+  font-size: 30px;
 }
 p {
-  font-size: 17px;
+  font-size: 18px;
   text-align: justify;
+  margin-bottom: 20px;
 }
 .figure {
   text-align: center;
-  margin: 30px 0;
+  margin: 40px 0;
+  position: relative;
 }
 .figure img {
-  width: 85%;
+  max-width: 100%;
+  height: auto;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.figure img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 .caption {
   font-style: italic;
   color: #475569;
-  font-size: 15px;
-  margin-top: 8px;
+  font-size: 16px;
+  margin-top: 10px;
 }
 blockquote {
   background: #ecfeff;
   border-left: 6px solid #0e7490;
-  padding: 12px 18px;
+  padding: 16px 24px;
   color: #164e63;
   font-style: italic;
-  margin: 30px 0;
+  font-size: 20px;
+  margin: 40px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: relative;
+}
+blockquote::before {
+  content: '“';
+  font-size: 48px;
+  color: #0e7490;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+ul li:hover {
+  color: #0369a1;
+}
+ul li::before {
+  content: "🌱";
+  position: absolute;
+  left: 0;
+  color: #0d9488;
+  font-size: 20px;
 }
 table {
-  width: 80%;
-  margin: 20px auto;
-  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 th, td {
-  border: 1px solid #cbd5e1;
-  padding: 10px;
-  text-align: center;
+  border: none;
+  padding: 12px 16px;
+  text-align: left;
 }
 th {
   background: #0d9488;
   color: white;
+  font-weight: 600;
 }
 td {
   background: #f1f5f9;
+  border-top: 1px solid #cbd5e1;
+}
+tr:hover td {
+  background: #e0f2fe;
+  transition: background 0.3s;
+}
+tr:last-child td {
+  border-bottom: none;
 }
 footer {
   text-align: center;
-  padding: 25px;
+  padding: 30px;
   background: #e2e8f0;
   color: #475569;
   font-size: 14px;
-  margin-top: 60px;
+  margin-top: 80px;
+  border-top: 1px solid #cbd5e1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    padding: 60px 15px;
+  }
+  header h1 {
+    font-size: 40px;
+  }
+  header h2 {
+    font-size: 22px;
+  }
+  main {
+    padding: 30px 15px;
+  }
+  section {
+    padding: 20px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  p, ul li {
+    font-size: 16px;
+  }
+  table {
+    font-size: 14px;
+  }
 }
 </style>
 </head>
@@ -102,7 +220,12 @@ footer {
 
 <main>
 
+<section id="abstract">
 <h2>Abstract</h2>
+<div class="figure">
+  <img src="https://scx1.b-cdn.net/csz/news/800a/2020/localcommuni.jpg" alt="Tropical Peatlands in Indonesia">
+  <div class="caption">Additional Figure: Tropical Peatlands in Indonesia</div>
+</div>
 <p>
 Indonesia’s tropical peatlands store nearly half of the world’s tropical peat carbon but are highly sensitive to water table fluctuations, making them vulnerable to climate variability and drainage. This study quantifies the impacts of <b>El Niño–Southern Oscillation (ENSO)</b> events and <b>canal water level (CWL) management</b> on <b>peat water table depth (WTD)</b> and carbon emissions in <i>Ogan Komering Ilir, South Sumatra</i>.
 </p>
@@ -114,14 +237,22 @@ Using daily <b>ERA5 rainfall and temperature data (2001–2024)</b>, we simulate
 <blockquote>
 “Modest, targeted rewetting is an effective and cost-efficient Nature-Based Solution (NbS) to mitigate greenhouse gas emissions and enhance peatland resilience.”
 </blockquote>
+</section>
 
+<section id="baseline">
 <h2>Water Table Depth (Baseline)</h2>
 <div class="figure">
   <img src="data:image/jpeg;base64,{{figure1_base64}}" alt="Baseline WTD">
   <div class="caption">Figure 1. Baseline water table depth (WTD) distribution (2001–2024) across the study area.</div>
 </div>
+</section>
 
+<section id="enso">
 <h2>Carbon Emissions: ENSO Years</h2>
+<div class="figure">
+  <img src="https://www.climate.gov/sites/default/files/2021-10/Nino_winterandsummer_620.jpg" alt="El Niño Climate Impacts">
+  <div class="caption">Additional Figure: Global Impacts of El Niño</div>
+</div>
 <div class="figure">
   <img src="data:image/png;base64,{{figure2_base64}}" alt="ENSO impact">
   <div class="caption">Figure 2. Changes in WTD and carbon emissions during El Niño years compared to baseline.</div>
@@ -133,8 +264,18 @@ Using daily <b>ERA5 rainfall and temperature data (2001–2024)</b>, we simulate
   <li>🌧️ La Niña maintained shallower WTDs, reducing emissions.</li>
   <li>🔄 ENSO-driven hydroclimatic variability accelerates peat carbon loss.</li>
 </ul>
+<div class="figure">
+  <img src="https://live.staticflickr.com/4573/27247847119_dd641cf6bf_o.png" alt="CO2 Emissions from Peatlands">
+  <div class="caption">Additional Figure: CO2 Emissions from Peatlands Degradation</div>
+</div>
+</section>
 
+<section id="rewetting">
 <h2>Scenario: Canal Water Level (CWL) Rewetting</h2>
+<div class="figure">
+  <img src="https://bg.copernicus.org/articles/20/295/2023/bg-20-295-2023-avatar-web.png" alt="Peatland Rewetting Process">
+  <div class="caption">Additional Figure: Peatland Rewetting Process</div>
+</div>
 <div class="figure">
   <img src="data:image/jpeg;base64,{{scenario1_base64}}" alt="CWL rewetting">
   <div class="caption">Figure 3. Mitigation potential of targeted canal water level rewetting (+10 cm).</div>
@@ -147,13 +288,16 @@ Using daily <b>ERA5 rainfall and temperature data (2001–2024)</b>, we simulate
 <tr><td>Avoided Emissions (1M ha)</td><td>~3.68 MtCO₂ yr⁻¹</td></tr>
 <tr><td>Economic Value</td><td>USD 13.4 – 257.8 million yr⁻¹</td></tr>
 </table>
+</section>
 
+<section id="takeaways">
 <h2>Key Takeaways</h2>
 <ul>
   <li>🌱 Nature-based rewetting strengthens peatland and climate resilience.</li>
   <li>💧 Low-cost CWL management delivers measurable emission reductions.</li>
   <li>💰 Rewetting provides both climate and financial co-benefits.</li>
 </ul>
+</section>
 
 </main>
 
