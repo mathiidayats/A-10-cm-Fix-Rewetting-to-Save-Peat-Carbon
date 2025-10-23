@@ -57,7 +57,7 @@ These findings demonstrate that **modest, targeted rewetting** is an effective a
 
 # Scenario: Canal Water Level (CWL) Rewetting
 
-![](figures/figure3_rewetting.png){width=80%}
+![](scenario1.jpeg){width=50%}
 *Figure 3. Mitigation potential of targeted canal water level rewetting.*
 
 **Findings**
